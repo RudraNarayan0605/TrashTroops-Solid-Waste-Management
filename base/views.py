@@ -16,11 +16,6 @@ from django.conf import settings
 current_username = None
 
 def homePage(request):
-        
-    ab = User.objects.filter(username='prabhakar')
-    for a in ab:
-        print(a.mobile_number)
-        print(a.email)
     if request.user.is_authenticated:
         current_username = request.user.username
         # Do something with the username, such as passing it to a template
